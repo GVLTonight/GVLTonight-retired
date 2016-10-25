@@ -7,9 +7,11 @@ body {
 
 h1 {
     margin: 10px 0;
-    font-family: "Quicksand", monospace;
+    font-family: "Quicksand", sans-serif;
     text-align: center;
     color: #eeeeee;
+    letter-spacing: 10px;
+    font-weight: lighter;
 }
 
 .wrapper {
@@ -21,8 +23,9 @@ h1 {
     position: fixed;
     left: 0px;
     right: 0px;
-    height: 200px;
-    top: calc(50vh - 100px);
+    bottom: 0;
+    top: 50vh;
+    // height: 400px;
     background-color: #222;
     z-index: -1;
     box-shadow: 0 0 0 4px black;
@@ -37,12 +40,6 @@ img {
 
 @media (max-width: 600px) {
     .band {
-        top: 20vh;
-    }
-}
-
-@media (max-width: 400px) {
-    .band {
-        top: 15vh;
+        top: 30vh;
     }
 }
