@@ -41,5 +41,10 @@
         "single"
       ]
     }
+  },
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "request": "^2.76.0",
+    "request-promise": "^4.1.1"
   }
 }
