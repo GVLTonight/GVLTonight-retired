@@ -3,7 +3,7 @@ let cheerio = require('cheerio'),
     fs = require('fs');
 
 let url = 'http://www.peacecenter.org/events',
-    local_path = '../scrubber/casper-GVLTonight/html/peace-center.html',
+    local_path = '../../scrubber/casper-GVLTonight/html/peace-center.html',
     shows = [];
 
 function parser(path){
