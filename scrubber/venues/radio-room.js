@@ -1,9 +1,11 @@
 let cheerio = require('cheerio'),
     request = require('request'),
-    fs = require('fs');
+    fs = require('fs'),
+    path = require('path');
 
 let url = 'http://www.radioroomgreenville.org/calendar',
-    local_path = '../casper-GVLTonight/html/radio-room.html',
+    // local_path = './scrubber/casper/html/radio-room.html',
+    local_path = './scrubber/casper/html/radio-room.html',
     shows = [];
 
 function parser(path){
