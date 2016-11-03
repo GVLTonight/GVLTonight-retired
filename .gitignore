@@ -1,4 +1,19 @@
+# Node Modules
 node_modules
-.tmp
+
+# Bower
 bower_components
+
+# Test Bower
 test/bower_components
+
+# Local DB
+db
+
+# DS_Store
+.DS_Store
+
+# Logs
+logs
+*.log
+.tmp
