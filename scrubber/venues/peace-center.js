@@ -3,11 +3,11 @@ let cheerio = require('cheerio'),
     fs = require('fs');
 
 let url = 'http://www.peacecenter.org/events',
-    local_path = '../../scrubber/casper-GVLTonight/html/peace-center.html',
+    local_path = './scrubber/casper/html/peace-center.html',
     shows = [];
 
-function parser(path){
-    var $ = cheerio.load(fs.readFileSync(path));
+peace_center = function(done){
+    var $ = cheerio.load(fs.readFileSync(local_path));
     $('.entry').each(function(i, elem) {
         var $$ = cheerio.load(elem);
         var raw_date = $$('.tour-timeframe').attr('data-tour-datetime');
@@ -24,7 +24,11 @@ function parser(path){
         }
         shows.push(show);
     });
-    console.log(shows);
+
+    if (shows.length > 0){
+        console.log('peace center OKAY');
+    }
+    done(null, shows)
 }
 
-parser(local_path);
+module.exports = peace_center;

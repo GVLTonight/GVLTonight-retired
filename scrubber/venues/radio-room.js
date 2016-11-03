@@ -1,15 +1,13 @@
-let cheerio = require('cheerio'),
+const cheerio = require('cheerio'),
     request = require('request'),
-    fs = require('fs'),
-    path = require('path');
+    fs = require('fs');
 
 let url = 'http://www.radioroomgreenville.org/calendar',
-    // local_path = './scrubber/casper/html/radio-room.html',
     local_path = './scrubber/casper/html/radio-room.html',
     shows = [];
 
-function parser(path){
-    var $ = cheerio.load(fs.readFileSync(path));
+radio_room = function(done){
+    var $ = cheerio.load(fs.readFileSync(local_path));
     $('.tour-item').each(function(i, elem) {
         var $$ = cheerio.load(elem);
         var raw_date = $$('.tour-timeframe').attr('data-tour-datetime');
@@ -26,7 +24,11 @@ function parser(path){
         }
         shows.push(show);
     });
-    console.log(shows);
+    if (shows.length > 0){
+        console.log('radio room OKAY');
+    }
+
+    done(null, shows)
 }
 
-parser(local_path);
+module.exports = radio_room;

@@ -9,9 +9,9 @@ var casper = require('casper').create({
 });
 
 
-var url = 'http://www.radioroomgreenville.com/calendar';
-var title = 'radio-room';
-var selector = '.tour-item';
+var url = 'https://www.facebook.com/search/events/?q=Cabin%20Floor%20Records&place_id=126363234062075&surface=tyah';
+var title = 'cabin-floor';
+var selector = '._1yt';
 var stripped;
 
 var fs = require('fs');
