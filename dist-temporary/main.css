@@ -43,7 +43,7 @@ a {
 }
 
 a:hover {
-    color: #D7D935;
+    color: #333333;
 }
 
 @media (max-width: 600px) {
