@@ -15,6 +15,7 @@ Run using casperjs to loop through venue event urls and pull rendered raw html t
 
 1. Install PhantomJS
 1. Install CasperJS
+1. $`npm install`
 1. $`casperjs scrubber/casper/scripts/multiple-urls.js`
 1. $`node scrubber/init.js`
 
