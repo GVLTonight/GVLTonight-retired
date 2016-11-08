@@ -22,9 +22,10 @@ radio_room = function(done) {
             date: date
         };
         shows.push(show);
+        // console.log(shows);
     });
     if (shows.length > 0) {
-        console.log('radio room OKAY');
+        console.log('Radio Room OKAY');
     }
 
     done(null, shows);

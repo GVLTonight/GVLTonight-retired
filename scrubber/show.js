@@ -53,7 +53,7 @@ function addShows(shows, done) {
     shows.forEach(function(show) {
         q.defer(function(cb) {
             db.put(show.date + '!' + show.venue + '!' + show.title, JSON.stringify(show), function(err) {
-                console.log(show.date + '!' + show.venue + '!' + show.title)
+                console.log(show.date + '!' + show.venue + '!' + show.title);
                 cb(null, null);
             });
         });

@@ -2,6 +2,11 @@
 
 var venues = [
     {
+        url: 'https://www.facebook.com/Cabin-Floor-Records-126363234062075/events/?ref=page_internal',
+        title: 'cabin-floor',
+        selector: '._4dmu'
+    },
+    {
         url: 'http://www.peacecenter.org/events/shows-tickets',
         title: 'peace-center',
         selector: '.event_list .entry'
@@ -10,11 +15,6 @@ var venues = [
         url: 'http://www.radioroomgreenville.com/calendar',
         title: 'radio-room',
         selector: '.tour-item'
-    },
-    {
-        url: 'https://www.facebook.com/search/events/?q=Cabin%20Floor%20Records&place_id=126363234062075&surface=tyah',
-        title: 'cabin-floor',
-        selector: '._gll'
     }
 ]
 
