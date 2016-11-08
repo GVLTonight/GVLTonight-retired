@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 var venues = [
     {
         url: 'http://www.peacecenter.org/events/shows-tickets',
@@ -12,7 +14,7 @@ var venues = [
     {
         url: 'https://www.facebook.com/search/events/?q=Cabin%20Floor%20Records&place_id=126363234062075&surface=tyah',
         title: 'cabin-floor',
-        selector: '._1yt'
+        selector: '._gll'
     }
 ]
 
