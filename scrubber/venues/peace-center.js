@@ -18,6 +18,7 @@ peace_center = function(done) {
             venueUrl: url,
             title: $$('h3').text(),
             url: $$('.more').attr('href'),
+            time: null,
             date: date
         };
         shows.push(show);

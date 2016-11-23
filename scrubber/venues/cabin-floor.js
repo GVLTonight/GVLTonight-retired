@@ -31,6 +31,15 @@ cabin_floor = function(done) {
     done(null, shows);
 };
 
+normalizeDate = function(date) {
+    date = date.split('/');
+    let month = date.shift();
+    let day = date.shift();
+    date.push(month);
+    date.push(day);
+    return date.join('-');
+};
+
 module.exports = cabin_floor;
 
 // cabin_floor();
