@@ -2,23 +2,8 @@
 
 var venues = [
     {
-        url: 'https://www.facebook.com/Cabin-Floor-Records-126363234062075/events/?ref=page_internal',
-        title: 'cabin-floor',
-        selector: '._4dmu'
-    },
-    {
-        url: 'http://www.peacecenter.org/events/shows-tickets',
-        title: 'peace-center',
-        selector: '.event_list .entry'
-    },
-    {
-        url: 'http://www.radioroomgreenville.com/calendar',
-        title: 'radio-room',
-        selector: '.tour-item'
-    },
-    {
         url: 'http://www.smileysacousticcafe.com/calendar.php',
-        title: 'Smileys',
+        title: 'smileys',
         selector: '#mvEventContainer2 > div:nth-child(3) > table.st-grid > tbody > tr:nth-child(2)'
     }
 ]
