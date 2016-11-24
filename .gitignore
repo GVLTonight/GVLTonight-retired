@@ -17,3 +17,5 @@ db
 logs
 *.log
 .tmp
+
+fb_access_token
