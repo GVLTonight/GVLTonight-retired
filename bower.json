@@ -1,0 +1,11 @@
+{
+  "name": "gvltonight",
+  "description": "Your source for everything tonight in Greenville SC.",
+  "authors": [
+    "Kevin Bost <kevbost@gmail.com>"
+  ],
+  "private": true,
+  "dependencies": {
+    "jquery": "~3.1.1"
+  }
+}
