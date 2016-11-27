@@ -3,74 +3,83 @@
 
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
 
-body {
-    padding: 0 20px;
-    background-color: #333;
+@import "variables";
+@import "helpers";
+@import "core";
+
+.wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+
+    img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        box-shadow: 0 0 0 3px $black, 0 0 100px 3px rgba(0, 0, 0, .5);
+    }
+
+    .event-list {
+        padding: 20px;
+        background-color: $gray-darker;
+        color: $white;
+        box-shadow: 0 0 0 4px $black;
+        overflow-x: scroll;
+    }
+}
+
+
+.band {
+    position: fixed;
+    top: 30vh;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $gray-darker;
+    box-shadow: 0 0 0 4px $black;
+    z-index: -1;
 }
 
 h1 {
     margin: 10px 0;
+    color: $gray-lighter;
     font-family: "Quicksand", sans-serif;
-    text-align: center;
-    color: #eeeeee;
-    letter-spacing: 10px;
     font-weight: lighter;
+    letter-spacing: 10px;
+    text-align: center;
+
+    a {
+        color: $white;
+
+        &:hover {
+            color: $green;
+        }
+    }
+
+    &.link-out {
+        letter-spacing: normal;
+    }
 }
 
-.wrapper {
-    margin: 0 auto;
-    max-width: 670px;
-}
 
-.band {
-    position: fixed;
-    left: 0px;
-    right: 0px;
-    bottom: 0;
-    top: 30vh;
-    // height: 400px;
-    background-color: #222;
-    z-index: -1;
-    box-shadow: 0 0 0 4px black;
-}
-
-img {
-    width: 100%;
-    max-width: 670px;
-    height: auto;
-    box-shadow: 0px 0px 0px 3px #000, 0px 0px 100px 3px rgba(0, 0, 0, 0.5);
-}
-
-a {
-    color: white;
-}
-
-a:hover {
-    color: #333333;
-}
 
 @media (max-width: 600px) {
     .band {
         top: 30vh;
     }
-}
 
-.event-list {
-    background-color: #ddd;
-    color: white;
-    overflow-x: scroll;
-}
-
-@media (max-width: 600px) {
     .pre {
         width: 100%;
+    }
+
+    .link-out {
+        font-size: 1.5em;
     }
 }
 
 
 .browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+    margin: .2em 0;
+    padding: .2em 0;
+    background: $gray-light-mid-mid;
+    color: $black;
 }
