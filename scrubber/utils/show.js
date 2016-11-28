@@ -3,14 +3,14 @@ const queue = require('queue-async');
 const moment = require('moment');
 const db = levelup('./db');
 
-exports.getShows = function(done) {
-    getShows(function(result) {
+exports.getShows_from_DB = function(done) {
+    getShows_from_DB(function(result) {
         done(result);
     });
 };
 
-exports.addShows = function(shows) {
-    addShows(shows, function() {
+exports.addShows_to_DB = function(shows) {
+    addShows_to_DB(shows, function() {
         console.log('written');
     });
 };
@@ -27,7 +27,7 @@ exports.referenceDate = function() {
     return result;
 };
 
-function getShows(done) {
+function getShows_from_DB(done) {
     let showsThisWeek = [];
     let date = exports.referenceDate();
 
@@ -48,7 +48,7 @@ function getShows(done) {
     });
 }
 
-function addShows(shows, done) {
+function addShows_to_DB(shows, done) {
     let q = queue(1);
     shows.forEach(function(show) {
         q.defer(function(cb) {

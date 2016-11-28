@@ -26,12 +26,25 @@
         box-shadow: 0 0 0 4px $black;
         overflow-x: scroll;
 
+        ul {
+            padding: 0;
+            list-style-type: none;
+        }
+
         pre {
             // margin: 0;
         }
     }
 }
 
+.today {
+    &:before {
+        display: block;
+        color: $green;
+        font-weight: bold;
+        content: "TODAY";
+    }
+}
 
 .band {
     position: fixed;
@@ -44,6 +57,16 @@
     z-index: -1;
 }
 
+a {
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+        color: $green;
+        text-decoration: underline;
+    }
+}
+
 h1 {
     margin: 10px 0;
     color: $gray-lighter;
@@ -52,16 +75,10 @@ h1 {
     letter-spacing: 10px;
     text-align: center;
 
-    a {
-        color: $white;
-
-        &:hover {
-            color: $green;
-        }
-    }
 
     &.link-out {
         letter-spacing: normal;
+        // text-decoration: underline;
     }
 }
 
