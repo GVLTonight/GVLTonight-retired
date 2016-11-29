@@ -39,10 +39,10 @@
 
 .today {
     &:before {
-        display: block;
+        //display: block;
         color: $green;
         font-weight: bold;
-        content: "TODAY";
+        content: "TODAY - ";
     }
 }
 
