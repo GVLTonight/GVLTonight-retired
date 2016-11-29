@@ -6,7 +6,7 @@ module.exports = function(shows, done){
     shows.forEach(function(input){
         let current_input = JSON.parse(input);
         // show_HTML_list += (current_input.date === moment().format('YYYY-MM-DD') ? '<li>' : '<li class="today">');
-        show_HTML_list += (current_input.date === moment().format('YYYY-MM-DD') ? '<li class="today">' : '<li>');
+        show_HTML_list += (current_input.date === moment().format('YYYY-MM-DD') ? '<li class="today">' : '<li class="not-today">');
         show_HTML_list += current_input.date;
         show_HTML_list += ' - ';
         show_HTML_list += '<a href="' + current_input.venueUrl + '" target="_blank">';

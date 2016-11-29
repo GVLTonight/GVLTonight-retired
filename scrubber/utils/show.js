@@ -18,7 +18,7 @@ exports.addShows_to_DB = function(shows) {
 // if there is a date on the command line, use that. else use current moment(
 // command line argument should be of format YYYY-MM-DD
 exports.referenceDate = function() {
-    let result = moment();
+    let result = moment().utcOffset("-05:00");
 
     if (process.argv.length === 3) {
         result = moment(process.argv[2]);
@@ -31,7 +31,7 @@ function getShows_from_DB(done) {
     let showsThisWeek = [];
     let date = exports.referenceDate();
 
-    let today = date.toISOString().slice(0, 10);
+    let today = date.subtract(1, 'days').toISOString().slice(0, 10);
     let nextWeek = date.add(7, 'days').toISOString().slice(0, 10);
     db.createReadStream({
         gte: today,
