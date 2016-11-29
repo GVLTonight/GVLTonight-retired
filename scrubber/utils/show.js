@@ -31,7 +31,7 @@ function getShows_from_DB(done) {
     let showsThisWeek = [];
     let date = exports.referenceDate();
 
-    let today = date.subtract(1, 'days').toISOString().slice(0, 10);
+    let today = date.toISOString().slice(0, 10);
     let nextWeek = date.add(7, 'days').toISOString().slice(0, 10);
     db.createReadStream({
         gte: today,
