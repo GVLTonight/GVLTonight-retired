@@ -2,7 +2,9 @@
 
 In progress source for what's happening tonight in Greenville, SC.
 
-[project is in a very raw state]
+[project is in a very raw state](http://gvltonight.com)
+
+
 
 Digital Ocean Droplet is live ready to be cron'd.
 
