@@ -4,7 +4,7 @@ In progress source for what's happening tonight in Greenville, SC.
 
 (project is in a very raw state)
 
-(GVLTonight.com)[http://gvltonight.com]
+[GVLTonight.com](http://gvltonight.com)
 
 
 
