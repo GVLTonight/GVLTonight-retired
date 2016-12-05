@@ -1,7 +1,7 @@
 const cheerio = require('cheerio');
 const fs = require('fs');
 
-let url = 'http://www.radioroomgreenville.org/calendar';
+let url = 'http://www.radioroomgreenville.com/calendar';
 let local_path = './scrubber/casper/html/radio-room.html';
 let shows = [];
 
