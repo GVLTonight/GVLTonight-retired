@@ -42,7 +42,7 @@
         //display: block;
         color: $green;
         font-weight: bold;
-        content: "TODAY - ";
+        content: "TODAY";
     }
 }
 
@@ -50,7 +50,7 @@
     &:before {
         color: $orange;
         font-weight: bold;
-        content: "LATER - ";
+        content: "LATER";
     }
 }
 
