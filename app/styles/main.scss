@@ -46,6 +46,14 @@
     }
 }
 
+.not-today {
+    &:before {
+        color: $orange;
+        font-weight: bold;
+        content: "LATER - ";
+    }
+}
+
 // pre > ul > li:nth-child(1) {
 
 // }
