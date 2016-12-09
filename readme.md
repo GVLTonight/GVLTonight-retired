@@ -6,7 +6,6 @@ In progress source for what's happening tonight in Greenville, SC.
 
 [GVLTonight.com](http://gvltonight.com)
 
-hi!!!
 
 Digital Ocean Droplet is live ready to be cron'd.
 
