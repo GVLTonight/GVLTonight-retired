@@ -29,6 +29,8 @@ radio_room = function(done) {
     }
 
     done(null, shows);
+    // console.log(shows);
 };
 
 module.exports = radio_room;
+// radio_room();

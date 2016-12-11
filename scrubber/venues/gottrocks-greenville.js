@@ -8,8 +8,9 @@ let shows = [];
 
 gottrocks = function(done){
     let $ = cheerio.load(fs.readFileSync(local_path));
-    $('.eventlist-event').each(function(i, elem) {
+    $('.eventlist-event--upcoming').each(function(i, elem) {
         let $$ = cheerio.load(elem);
+        let date = $$('.eventlist-meta-date .event-date:first-of-type').attr('datetime');
 
         let show = {
             venue: 'Gottrocks',
@@ -17,7 +18,7 @@ gottrocks = function(done){
             title: $$('.eventlist-title').text(),
             url: $$('.eventlist-title-link').attr('href'),
             time: $$('.event-time-12hr > .event-time-12hr-start').text(),
-            date: $$('.eventlist-meta-date > time').attr('datetime')
+            date: date
         }
 
         shows.push(show);
