@@ -28,6 +28,7 @@ smileys_acoustic_cafe = function(done) {
     }
 
     done(null, shows);
+    // console.log(shows);
 };
 
 module.exports = smileys_acoustic_cafe;
