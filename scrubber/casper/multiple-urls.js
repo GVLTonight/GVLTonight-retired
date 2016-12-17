@@ -6,40 +6,39 @@ var venues = [
         title: 'ipa-greenville',
         selector: 'pre',
         json: true
+    },
+    {
+        url: 'http://api.eventful.com/json/venues/get?app_key=' + whatevsidontcaremuch.split('0%0').reverse().join('') + '&id=V0-001-000441941-8.json',
+        title: 'ground-zero',
+        selector: 'pre',
+        json: true
+    },
+    {
+        url: 'https://clients6.google.com/calendar/v3/calendars/smileysacousticcafe@gmail.com/events?calendarId=smileysacousticcafe%40gmail.com&singleEvents=true&timeZone=America%2FNew_York&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2016-10-30T00%3A00%3A00-05%3A00&timeMax=3030-12-04T00%3A00%3A00-05%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs',
+        title: 'smileys-acoustic-cafe',
+        selector: 'pre',
+        json: true
+    },
+    {
+        url: 'http://www.gottrocksgreenville.com/shows-1/',
+        title: 'gottrocks-greenville',
+        selector: '.like-count'
+    },
+    {
+        url: 'https://www.facebook.com/Cabin-Floor-Records-126363234062075/events/?ref=page_internal',
+        title: 'cabin-floor',
+        selector: '._4dmu'
+    },
+    {
+        url: 'http://www.peacecenter.org/events/shows-tickets',
+        title: 'peace-center',
+        selector: '.event_list .entry'
+    },
+    {
+        url: 'http://www.radioroomgreenville.com/calendar',
+        title: 'radio-room',
+        selector: '.tour-item'
     }
-    // ,
-    // {
-    //     url: 'http://api.eventful.com/json/venues/get?app_key=' + whatevsidontcaremuch.split('0%0').reverse().join('') + '&id=V0-001-000441941-8.json',
-    //     title: 'ground-zero',
-    //     selector: 'pre',
-    //     json: true
-    // },
-    // {
-    //     url: 'https://clients6.google.com/calendar/v3/calendars/smileysacousticcafe@gmail.com/events?calendarId=smileysacousticcafe%40gmail.com&singleEvents=true&timeZone=America%2FNew_York&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2016-10-30T00%3A00%3A00-05%3A00&timeMax=3030-12-04T00%3A00%3A00-05%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs',
-    //     title: 'smileys-acoustic-cafe',
-    //     selector: 'pre',
-    //     json: true
-    // },
-    // {
-    //     url: 'http://www.gottrocksgreenville.com/shows-1/',
-    //     title: 'gottrocks-greenville',
-    //     selector: '.like-count'
-    // },
-    // {
-    //     url: 'https://www.facebook.com/Cabin-Floor-Records-126363234062075/events/?ref=page_internal',
-    //     title: 'cabin-floor',
-    //     selector: '._4dmu'
-    // },
-    // {
-    //     url: 'http://www.peacecenter.org/events/shows-tickets',
-    //     title: 'peace-center',
-    //     selector: '.event_list .entry'
-    // },
-    // {
-    //     url: 'http://www.radioroomgreenville.com/calendar',
-    //     title: 'radio-room',
-    //     selector: '.tour-item'
-    // }
 ]
 
 
