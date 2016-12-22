@@ -16,7 +16,7 @@ gottrocks = function(done){
             venue: 'Gottrocks',
             venueUrl: url,
             title: $$('.eventlist-title').text(),
-            url: $$('.eventlist-title-link').attr('href'),
+            url: 'http://www.gottrocksgreenville.com/' + $$('.eventlist-title-link').attr('href'),
             time: $$('.event-time-12hr > .event-time-12hr-start').text(),
             date: date
         }
