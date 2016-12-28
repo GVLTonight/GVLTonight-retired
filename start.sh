@@ -7,3 +7,4 @@ git add .;
 git status;
 git commit -m "nightly update";
 git subtree push --prefix dist origin gh-pages;
+git push;
