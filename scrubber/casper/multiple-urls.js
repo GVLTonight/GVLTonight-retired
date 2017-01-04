@@ -60,7 +60,7 @@ casper.start('about:blank');
 casper.each(venues, function(casper, venue) {
     casper.thenOpen(venue.url, function() {
         if(venue.json){
-
+            this.echo('Starting: ' + venue.title, "INFO");
             casper.then(function(){
                 var js = this.evaluate(function() { return document; });
                 var buffer = JSON.stringify(js.all[0].textContent);
@@ -70,21 +70,25 @@ casper.each(venues, function(casper, venue) {
                 var fix_double_quotes_one = strip_escapes.replace(new RegExp(': ""', 'g'), ': "\\"');
                 var fix_double_quotes_two = fix_double_quotes_one.replace(new RegExp('""', 'g'), '\\""');
                 stripped = fix_double_quotes_two;
-                this.echo('Completed: ' + venue.title + '.json');
+                this.echo('    Completed: ' + venue.title + '.json');
             });
             casper.then(function(){
                 fs.write('./scrubber/casper/html/' + venue.title + '.json', stripped, 'w');
             });
 
         } else {
-
+            this.echo('Starting: ' + venue.title, "INFO");
             casper.waitForSelector(venue.selector, function(){
                 var js = this.evaluate(function() { return document; });
                 var buffer = JSON.stringify(js.all[0].outerHTML);
                 var result = buffer.slice(1, -1);
                 var strip_newlines = result.replace(new RegExp('\\\\n', 'g'), '');
                 stripped = strip_newlines.replace(new RegExp('\\\\', 'g'), '');
-                this.echo('Completed: ' + venue.title);
+                this.echo('    Completed: ' + venue.title, "COMMENT");
+            }, function onTimeout(error){
+                this.echo("Something happened: " + venue.selector + " not found... " + "Skipping " + venue.title + "...", "WARN_BAR");
+                this.echo("continuing...", "GREEN_BAR");
+                return "error";
             });
             casper.then(function(){
                 fs.write('./scrubber/casper/html/' + venue.title + '.html', '<!-- ' + new Date(Date.now()).toLocaleString() + ' -->' + stripped + '<!-- ' + new Date(Date.now()).toLocaleString() + ' -->', 'w');
