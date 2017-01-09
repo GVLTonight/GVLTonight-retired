@@ -12,8 +12,6 @@ Date.prototype.addDays = function(days) {
 var endDateBuffer = date.addDays(7);
 var endDate = endDateBuffer.toISOString();
 
-// console.log(startDate, endDate);
-
 var venues = [
     {
          url: 'http://api.eventful.com/json/venues/get?app_key=' + whatevsidontcaremuch.split('0%0').reverse().join('') + '&id=V0-001-007408432-1.json',
@@ -42,10 +40,11 @@ var venues = [
      {
          url: 'https://www.facebook.com/Cabin-Floor-Records-126363234062075/events/?ref=page_internal',
          title: 'cabin-floor',
-         selector: '._4dmu'
+         selector: '#pagelet_events > div > div'
+         // selector: '._4dmu'
      },
      {
-         url: 'http://www.peacecenter.org/events/shows-tickets',
+         url: 'https://www.peacecenter.org/events/shows-tickets',
          title: 'peace-center',
          selector: '.event_list .entry'
      },
@@ -64,7 +63,8 @@ var fs = require('fs'),
         pageSettings: {
             customHeaders: {
                 'Accept-Encoding': 'identity'
-            }
+            },
+            userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
         }
     });
 
