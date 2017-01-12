@@ -1,6 +1,6 @@
 #!/bin/bash
-casperjs scrubber/casper/multiple-urls.js;
-node scrubber/init.js;
+casperjs src/casper/multiple-urls.js;
+node src/init.js;
 gulp build;
 git status;
 git add .;
