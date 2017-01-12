@@ -1,7 +1,7 @@
 #!/bin/bash
 casperjs src/casper/multiple-urls.js;
 node src/init.js;
-node src/db_dump_to_file.js;
+node src/dump_DB_to_file.js;
 gulp build;
 git status;
 git add .;
