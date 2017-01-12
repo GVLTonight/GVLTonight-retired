@@ -88,7 +88,7 @@ casper.each(venues, function(casper, venue) {
                 this.echo('Complete: ' + venue.title + '.json', "COMMENT");
             });
             casper.then(function() {
-                fs.write('./scrubber/casper/html/' + venue.title + '.json', stripped, 'w');
+                fs.write('./src/casper/html/' + venue.title + '.json', stripped, 'w');
             });
 
         } else {
@@ -108,7 +108,7 @@ casper.each(venues, function(casper, venue) {
                 return "error";
             });
             casper.then(function() {
-                fs.write('./scrubber/casper/html/' + venue.title + '.html', '<!-- ' + new Date(Date.now()).toLocaleString() + ' -->' + stripped + '<!-- ' + new Date(Date.now()).toLocaleString() + ' -->', 'w');
+                fs.write('./src/casper/html/' + venue.title + '.html', '<!-- ' + new Date(Date.now()).toLocaleString() + ' -->' + stripped + '<!-- ' + new Date(Date.now()).toLocaleString() + ' -->', 'w');
             })
 
         }

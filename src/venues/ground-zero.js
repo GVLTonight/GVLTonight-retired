@@ -5,7 +5,7 @@ const moment = require('moment');
 const SOURCE_URL = 'http://eventful.com/spartanburg/venues/ground-zero-/V0-001-000441941-8';
 
 const url = 'https://www.facebook.com/pg/groundzeroSC/events/?ref=page_internal';
-const local_path = './scrubber/casper/html/ground-zero.json';
+const local_path = './src/casper/html/ground-zero.json';
 let shows = [];
 
 ground_zero = function(done){
