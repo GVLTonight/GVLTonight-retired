@@ -61,8 +61,8 @@ function dump_DB_to_file(){
       .on('end', function () {
         console.log('Stream ended');
         console.log(allData)
-        fs.truncate("db_dump.json", 0, function() {
-            fs.writeFile("db_dump.json", JSON.stringify(allData), function (err) {
+        fs.truncate("app/db_dump.json", 0, function() {
+            fs.writeFile("app/db_dump.json", JSON.stringify(allData), function (err) {
                 if (err) {
                     return console.log("Error writing file::: " + err);
                 }
