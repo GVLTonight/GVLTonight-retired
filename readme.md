@@ -27,3 +27,6 @@ Run using casperjs to loop through venue event url and pull rendered raw html to
 1. $`node src/init.js`
 
 Based on [http://chs-tonight.com]
+
+##TODO
+[ ] Upper Room
