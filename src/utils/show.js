@@ -4,9 +4,10 @@ const levelup = require('levelup');
 const queue = require('queue-async');
 const moment = require('moment');
 const Table = require('cli-table');
+const fs = require('fs');
 const db = levelup('./db');
 
-const tableOptions = { head: ['DATE', 'VENUE', 'TITLE'], colWidths: [12, 30, 40] };
+const tableOptions = { head: ['DATE', 'VENUE', 'TITLE'], colWidths: [12, 18, 20] };
 let table = new Table(tableOptions);
 let allShowsList = "";
 
@@ -83,6 +84,6 @@ function addShows_to_DB(shows, done) {
         } else {
             console.log(table.toString());
         }
-        console.log('Adding values to DB\nTo see all values being added/merged, run command with "-a" flag.\n');
+        console.log('Adding values to DB\nTo see all values being added/merged, run command with "-a" flag.\nOr look inside of db_dump.txt');
     });
 }

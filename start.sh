@@ -1,6 +1,8 @@
-#!/bin/bash
-casperjs scrubber/casper/multiple-urls.js;
-node scrubber/init.js;
+#!/bin/sh
+cd $HOME/Workspace/GVLTonight;
+casperjs src/casper/multiple-urls.js;
+node src/init.js;
+node src/dump_DB_to_file.js;
 gulp build;
 git status;
 git add .;

@@ -3,7 +3,7 @@ const fs = require('fs');
 const moment = require('moment');
 
 let url = 'https://www.facebook.com/Cabin-Floor-Records-126363234062075/events/?ref=page_internal';
-let local_path = './scrubber/casper/html/cabin-floor.html';
+let local_path = './src/casper/html/cabin-floor.html';
 let shows = [];
 
 cabin_floor = function(done) {

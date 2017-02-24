@@ -2,7 +2,7 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 
 let url = 'http://www.smileysacousticcafe.com/calendar.php';
-let local_path = './scrubber/casper/html/smileys-acoustic-cafe.json';
+let local_path = './src/casper/html/smileys-acoustic-cafe.json';
 let shows = [];
 
 smileys_acoustic_cafe = function(done) {

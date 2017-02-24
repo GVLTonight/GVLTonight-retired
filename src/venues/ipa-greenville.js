@@ -5,7 +5,7 @@ const moment = require('moment');
 const SOURCE_URL = 'http://eventful.com/greenville/venues/independent-public-alehouse-/V0-001-007408432-1';
 
 const url = 'https://www.facebook.com/ipagreenville/';
-const local_path = './scrubber/casper/html/ipa-greenville.json';
+const local_path = './src/casper/html/ipa-greenville.json';
 let shows = [];
 
 ground_zero = function(done){

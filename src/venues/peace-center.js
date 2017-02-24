@@ -3,7 +3,7 @@ const fs = require('fs');
 const moment = require('moment');
 
 const url = 'http://www.peacecenter.org/events';
-const local_path = './scrubber/casper/html/peace-center.html';
+const local_path = './src/casper/html/peace-center.html';
 let shows = [];
 
 peace_center = function(done){

@@ -3,7 +3,7 @@ const fs = require('fs');
 const moment = require('moment');
 
 const url = 'http://www.gottrocksgreenville.com/shows-1/';
-const local_path = './scrubber/casper/html/gottrocks-greenville.html';
+const local_path = './src/casper/html/gottrocks-greenville.html';
 let shows = [];
 
 gottrocks = function(done){
