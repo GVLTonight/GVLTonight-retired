@@ -47,7 +47,7 @@ var venues = [
         selector: '.event_list .entry'
     },
     {
-        url: 'http://www.radioroomgreenville.com/calendar',
+        url: 'http://www.radioroomgreenville.com',
         title: 'radio-room',
         selector: '.tour-list'
     }
