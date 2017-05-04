@@ -49,7 +49,7 @@ var venues = [
     {
         url: 'http://www.radioroomgreenville.com',
         title: 'radio-room',
-        selector: '.tour-list'
+        selector: '.tour-venue'
     }
 ];
 
